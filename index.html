@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
+<link rel="stylesheet" href="styles.css">
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="crossorigin=""/>
 <!-- Make sure you put this AFTER Leaflet's CSS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin=""></script>
@@ -11,7 +14,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
-var marker = L.marker([43.0618, 141.3545]).addTo(map).bindPopup("<b>Platos de cangrejo de Hokkaido</b><br>Hokkaido es el principal productor de cangrejo en Japón　ofreciendo una variedad de platos con diferentes tipos de cangrejo como el rey y el cangrejo de las nieves.");
+var marker = L.marker([43.0618, 141.3545]).addTo(map).bindPopup("<h1></h1><b>Platos de cangrejo de Hokkaido</b><br>Hokkaido es el principal productor de cangrejo en Japón　ofreciendo una variedad de platos con diferentes tipos de cangrejo como el rey y el cangrejo de las nieves.");
 var marker2 = L.marker([43.0618, 141.3545]).addTo(map).bindPopup("<b>Cerveza y Jingisukan en jardines cerveceros</b><br>Estilo de comida en Sapporo donde se disfruta el Jingisukan　un plato de cordero");
 var marker3 = L.marker([43.0618, 141.3545]).addTo(map).bindPopup("<b>Ramen de Sapporo</b><br>Ramen originario de Sapporo　caracterizado por su caldo a base de miso.caracterizado por su caldo a base de miso.");
 var marker4 = L.marker([43.1706, 141.3676]).addTo(map).bindPopup("<b>Ishikari nabe</b><br>Plato regional de Hokkaidoun guiso de olla con salmón como ingrediente principal.un guiso de olla con salmón como ingrediente principal.");
