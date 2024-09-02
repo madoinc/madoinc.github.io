@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin=""></script>
+<div id="map" style="width: 1000px; height: 1000px; position: relative; outline-style: none;"></div>
+<script>
+var map = L.map('map').setView([35.6712, 139.7811], 11);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+var marker = L.marker([43.0618, 141.3545]).addTo(map).bindPopup("<b>Platos de cangrejo de Hokkaido</b><br>Hokkaido es el principal productor de cangrejo en Japón　ofreciendo una variedad de platos con diferentes tipos de cangrejo como el rey y el cangrejo de las nieves.");
+var marker2 = L.marker([43.0618, 141.3545]).addTo(map).bindPopup("<b>Cerveza y Jingisukan en jardines cerveceros</b><br>Estilo de comida en Sapporo donde se disfruta el Jingisukan　un plato de cordero");
+var marker3 = L.marker([43.0618, 141.3545]).addTo(map).bindPopup("<b>Ramen de Sapporo</b><br>Ramen originario de Sapporo　caracterizado por su caldo a base de miso.caracterizado por su caldo a base de miso.");
+var marker4 = L.marker([43.1706, 141.3676]).addTo(map).bindPopup("<b>Ishikari nabe</b><br>Plato regional de Hokkaidoun guiso de olla con salmón como ingrediente principal.un guiso de olla con salmón como ingrediente principal.");
+var marker5 = L.marker([41.7687, 140.7290]).addTo(map).bindPopup("<b>Platos de calamar de Hakodate</b><br>Variedad de platos elaborados con calamar fresco de Hakodate.");
+var marker6 = L.marker([42.9849, 144.3814]).addTo(map).bindPopup("<b>Robatayaki de Kushiro</b><br>Estilo de cocina en Kushiro donde se disfrutan mariscos frescos asados a la parrilla con carbón.");
+var marker7 = L.marker([42.9849, 144.3814]).addTo(map).bindPopup("<b>Katte-don del mercado Washo de Kushiro</b><br>Un donburi de mariscos personalizado que se prepara eligiendo los ingredientes preferidos en el mercado.");
+var marker8 = L.marker([42.5145, 140.3770]).addTo(map).bindPopup("<b>Kani-meshi de Oshamambe</b><br>Plato famoso de Oshamambearroz cocido con carne de cangrejo.arroz cocido con carne de cangrejo.");
+var marker9 = L.marker([41.0403, 140.3842]).addTo(map).bindPopup("<b>Platos de almejas de lago Jusanko</b><br>Platos elaborados con almejas capturadas en el lago Jusanko de Aomori.");
+var marker10 = L.marker([40.5076, 141.4890]).addTo(map).bindPopup("<b>Ichigo-ni</b><br>Plato regional de Aomori　una sopa con erizo de mar y abulón.");
+var marker11 = L.marker([39.7036, 141.1526]).addTo(map).bindPopup("<b>Wanko soba de Morioka</b><br>Estilo de comer soba famoso en Moriokadonde se sirven pequeños cuencos de soba uno tras otro.donde se sirven pequeños cuencos de soba uno tras otro.");
+var marker12 = L.marker([39.7036, 141.1526]).addTo(map).bindPopup("<b>Reimen de Morioka</b><br>Plato de fideos fríos originario de Morioka.");
+var marker13 = L.marker([38.5789, 140.9523]).addTo(map).bindPopup("<b>Mochi-zen</b><br>Bandeja de comida regional de Ichinosekidonde se disfrutan varios platos de mochi.Iwate");
+var marker14 = L.marker([38.0012, 140.8501]).addTo(map).bindPopup("<b>Shiroishi umen</b><br>Plato regional de Shiroishi　que utiliza fideos finos y cortos.Miyagi");
+var marker15 = L.marker([38.2682, 140.8694]).addTo(map).bindPopup("<b>Lengua de res de Sendai</b><br>Famoso plato de Sendai de lengua de res a la parrilla en rodajas gruesas.");
+var marker16 = L.marker([38.3667, 141.0667]).addTo(map).bindPopup("<b>Platos de ostras de la bahía de Matsushima</b><br>Platos elaborados con ostras frescas de la bahía de MatsushimaMiyagi.");
+var marker17 = L.marker([38.9085, 141.5707]).addTo(map).bindPopup("<b>Platos de aleta de tiburón de Kesennuma</b><br>Platos famosos de Kesennuma que utilizan aleta de tiburón de diversas formas.");
+var marker18 = L.marker([40.2155, 140.0289]).addTo(map).bindPopup("<b>Kiritanpo nabe del norte de Akita</b><br>Plato regional de Akitaun guiso que incluye kiritanpo");
+var marker19 = L.marker([39.4557, 140.4712]).addTo(map).bindPopup("<b>Udon de Inaniwa</b><br>Famoso udon de YuzawaAkita");
+var marker20 = L.marker([39.7186, 140.1025]).addTo(map).bindPopup("<b>Shottsuru nabe (Hatahata nabe)</b><br>Plato regional de Akitaun guiso de hatahata (una especie de pez) con shottsuru");
+var marker21 = L.marker([38.2555, 140.3396]).addTo(map).bindPopup("<b>Soba de tabla de Yamagata</b><br>Soba única de Yamagata que se come sobre una tabla de madera.");
+var marker22 = L.marker([38.2555, 140.3396]).addTo(map).bindPopup("<b>Imoni-kai</b><br>Evento culinario de otoño en Yamagatauna fiesta al aire libre donde se cocina un guiso de taro y carne de res.");
+var marker23 = L.marker([37.8980, 139.9289]).addTo(map).bindPopup("<b>Soba de Yamato</b><br>Soba famosa de la ciudad de Yamato en KitakataFukushima.");
+var marker24 = L.marker([37.6513, 139.5466]).addTo(map).bindPopup("<b>Ramen de Kitakata</b><br>Ramen famoso de KitakataFukushima");
+var marker25 = L.marker([36.9960, 140.9652]).addTo(map).bindPopup("<b>Anko nabe</b><br>Plato regional de Ibarakiun guiso de olla que utiliza rape.");
+var marker26 = L.marker([36.5551, 139.8828]).addTo(map).bindPopup("<b>Gyoza de Utsunomiya</b><br>Gyoza famosa de la ciudad de UtsunomiyaTochigi.");
+var marker27 = L.marker([36.2068, 138.7894]).addTo(map).bindPopup("<b>Konjac y cebolla de Shimonita</b><br>Platos que utilizan konjac y cebollaespecialidades de la ciudad de Shimonita");
+var marker28 = L.marker([36.3408, 139.0184]).addTo(map).bindPopup("<b>Kama-meshi del paso de montaña</b><br>Famoso bento de estación en Gunmaarroz cocido en una olla pequeña con varios ingredientes encima.");
+var marker29 = L.marker([35.3132, 139.5508]).addTo(map).bindPopup("<b>Namero (Aji no tataki)</b><br>Plato regional de Chiba hecho con caballa machacada.");
+var marker30 = L.marker([35.4437, 139.6380]).addTo(map).bindPopup("<b>Comida china de Chinatown de Yokohama</b><br>Auténtica comida china que se puede disfrutar en el Chinatown de Yokohama.");
+var marker31 = L.marker([35.1414, 139.6211]).addTo(map).bindPopup("<b>Platos de atún de Misaki</b><br>Platos elaborados con atún fresco del puerto de Misaki en MiuraKanagawa.");
+var marker32 = L.marker([37.1478, 138.2356]).addTo(map).bindPopup("<b>Hegi soba</b><br>Soba originaria de la región de Uonuma en Niigataconocida por su firmeza única debido al uso de algas funori.");
+var marker33 = L.marker([38.2242, 139.4747]).addTo(map).bindPopup("<b>Platos de salmón de Murakami</b><br>Platos famosos de la ciudad de MurakamiNiigata");
+var marker34 = L.marker([35.9060, 136.1691]).addTo(map).bindPopup("<b>Platos de cangrejo Echizen</b><br>Platos elaborados con el cangrejo de las nieves de alta calidad capturado en Echizen");
+var marker35 = L.marker([35.9060, 136.1691]).addTo(map).bindPopup("<b>Oroshi soba de Echizen</b><br>Plato regional de Fukuisoba servida con rábano daikon rallado.");
+var marker36 = L.marker([35.6745, 138.5137]).addTo(map).bindPopup("<b>Hōtō</b><br>Plato regional de Yamanashiconsistente en fideos únicos cocidos en caldo de miso.");
+var marker37 = L.marker([35.9223, 138.4103]).addTo(map).bindPopup("<b>Helado suave de Seisen-ryo</b><br>Famoso helado suave de Seisen-ryo en Hokuto");
+var marker38 = L.marker([36.7587, 138.0854]).addTo(map).bindPopup("<b>Soba de Togakushi (Soba de Shinshu)</b><br>Soba famosa del distrito de Togakushi en Nagano");
+var marker39 = L.marker([36.6975, 138.3122]).addTo(map).bindPopup("<b>Dulces de castaña de Obuse</b><br>Dulces de castaña famosos de la ciudad de Obuse");
+var marker40 = L.marker([36.4019, 138.2491]).addTo(map).bindPopup("<b>Platos de matsutake de Shinshu Ueda</b><br>Platos famosos de setas matsutake de la ciudad de Ueda");
+var marker41 = L.marker([36.2384, 137.1855]).addTo(map).bindPopup("<b>Platos de hōba miso de Hida</b><br>Plato regional de la zona de Hida en Gifudonde se asa miso en una hoja de magnolia.");
+var marker42 = L.marker([34.7108, 137.7261]).addTo(map).bindPopup("<b>Platos de anguila de Hamamatsu</b><br>Platos famosos de anguila de la ciudad de HamamatsuShizuoka.");
+var marker43 = L.marker([36.3106, 138.2817]).addTo(map).bindPopup("<b>Sopa de tororo de Mariko</b><br>Plato regional de la ciudad de Shizuokauna sopa hecha con ñame rallado.");
+var marker44 = L.marker([35.1167, 138.9167]).addTo(map).bindPopup("<b>Anguila de Mishima</b><br>Platos de anguila famosos de la ciudad de MishimaShizuoka.");
+var marker45 = L.marker([35.0167, 138.4667]).addTo(map).bindPopup("<b>Platos de camarón sakura</b><br>Platos elaborados con pequeños camarones de color rosa capturados en el puerto de YuiShizuoka.");
+var marker46 = L.marker([34.6864, 136.9322]).addTo(map).bindPopup("<b>Platos de pulpo y pez globo de la isla Himakajima</b><br>Platos famosos de pulpo y pez globo de la isla Himakajima en MinamichitaAichi.");
+var marker47 = L.marker([35.1706, 136.9063]).addTo(map).bindPopup("<b>Nagoya meshi</b><br>Término que se refiere a los platos famosos de Nagoyacomo el tonkatsu con miso y el hitsumabushi.");
+var marker48 = L.marker([35.3042, 136.7998]).addTo(map).bindPopup("<b>Desayuno de Ichinomiya</b><br>Servicio de desayuno generoso con tostadas en cafeteríasoriginario de Ichinomiya");
+var marker49 = L.marker([34.5781, 136.5275]).addTo(map).bindPopup("<b>Sukiyaki de carne de Matsusaka</b><br>Sukiyaki preparado con carne de res de alta calidad de MatsusakaMie.");
+var marker50 = L.marker([35.0626, 136.6906]).addTo(map).bindPopup("<b>Platos de almejas de Kuwana</b><br>Platos elaborados con almejasespecialidad de la ciudad de Kuwana");
+var marker51 = L.marker([34.4877, 136.7240]).addTo(map).bindPopup("<b>Akafuku mochi</b><br>Dulce tradicional famoso de IseMie");
+var marker52 = L.marker([35.4723, 133.0505]).addTo(map).bindPopup("<b>Hōsho-yaki de Matsue</b><br>Plato regional de MatsueShimane");
+var marker53 = L.marker([35.3622, 132.7539]).addTo(map).bindPopup("<b>Soba de Izumo</b><br>Soba de la región de Izumo en Shimanecaracterizada por su color oscuro y fuerte aroma y sabor.");
+var marker54 = L.marker([34.3428, 134.0467]).addTo(map).bindPopup("<b>Udon de Sanuki</b><br>Udon famoso de Kagawaconocido por sus fideos de textura firme.");
+var marker55 = L.marker([33.2239, 132.5611]).addTo(map).bindPopup("<b>Tai-meshi de Uwajima</b><br>Plato regional de UwajimaEhime");
+var marker56 = L.marker([33.5064, 132.5445]).addTo(map).bindPopup("<b>Imotaki de Ozu</b><br>Plato regional de OzuEhime");
+var marker57 = L.marker([33.5598, 133.5311]).addTo(map).bindPopup("<b>Sawachi ryōri de Kochi</b><br>Plato regional de Kochidonde se sirven varios platos en un gran plato decorativo.");
+var marker58 = L.marker([33.5598, 133.5311]).addTo(map).bindPopup("<b>Tataki de bonito</b><br>Plato famoso de Kochidonde se chamusca la superficie del bonito y se sirve con condimentos.");
+var marker59 = L.marker([33.7491, 129.6877]).addTo(map).bindPopup("<b>Sashimi de calamar vivo de Yobuko</b><br>Sashimi de calamar frescoespecialidad de Yobuko en Karatsu");
+var marker60 = L.marker([33.1858, 130.4164]).addTo(map).bindPopup("<b>Platos de pescado del mar de Ariake</b><br>Platos elaborados con mariscos únicos capturados en el mar de AriakeSaga.");
+var marker61 = L.marker([35.4723, 133.0505]).addTo(map).bindPopup("<b>Lenguado de Jōka</b><br>Plato famoso de HijiOita");
+var marker62 = L.marker([33.2395, 131.6089]).addTo(map).bindPopup("<b>Platos de caballa y jurel de Seki</b><br>Platos elaborados con pescado de alta calidadespecialidad de Saganoseki en Oita.");
+var marker63 = L.marker([31.9077, 131.4202]).addTo(map).bindPopup("<b>Hiya-jiru</b><br>Plato regional de Miyazakidonde se come arroz en una sopa fría de miso.");
+var marker64 = L.marker([31.9077, 131.4202]).addTo(map).bindPopup("<b>Pollo local a la parrilla de Miyazaki</b><br>Plato de pollo local de Miyazaki asado a la parrilla con carbón.");
+var marker65 = L.marker([31.5969, 130.5571]).addTo(map).bindPopup("<b>Platos de kibi-nago</b><br>Platos elaborados con kibi-nagoun pequeño pez");
+var marker66 = L.marker([31.5969, 130.5571]).addTo(map).bindPopup("<b>Platos de cerdo negro de Kagoshima</b><br>Varios platos elaborados con cerdo negroespecialidad de Kagoshima.");
+var marker67 = L.marker([26.2124, 127.6809]).addTo(map).bindPopup("<b>Platos de cerdo de Okinawa</b><br>En Okinawa se utilizan diversas partes del cerdo para crear una variedad de platos.");
+
+var circle = L.circle([35.7012, 139.7611], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map).bindPopup("I am a circle.");
+var polygon = L.polygon([
+    [35.6722, 139.7807],
+    [35.6712, 139.7809],
+    [35.6732, 139.7811]
+]).addTo(map);
+</script>
+<style>
+            html, body {
+                  height: 100%;
+                  margin: 0;
+            }
+            .leaflet-container {
+                  height: 100%;
+                  width: 100%;
+                  max-width: 100%;
+                  max-height: 100%;
+            }
+</style>
+</head>
+<body>
+</body>
+</html>
